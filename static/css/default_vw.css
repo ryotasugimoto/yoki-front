@@ -1,0 +1,347 @@
+/*
+ひとまず px -> vw に変換してみただけ. 
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+ ここから記述
+ */
+/** px -> vw 表記 */
+body {
+    /* この2つの記述はスマホ用に調整してみた */
+    #min-width: 96.471vw;
+    #min-height: 120.235vw;
+    #max-height: auto;
+  
+    background-color: #3699AE;  
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+  }
+  .parent {
+    display: grid;
+    align-content: center;
+    grid-template-rows: 11.765vw 1.765vw 1fr;
+  }
+  
+  .header { 
+    height: 100%;
+    display: grid;
+    grid-template-columns: 11.765vw 1fr;
+  }
+  .header .title {
+    width: 100%;
+    #font-size: 5.882vw;
+    font-size: 5vw;
+    margin-left: 4.706vw;
+    #margin-bottom: 2.353vw;
+    margin-top: 3.529vw;
+    line-height: 30px;
+  
+  }
+  .header .title span {
+    margin-left: 2.706vw;
+  }
+  .header .user {
+    text-align: right;
+    margin-top: 3.765vw;
+    
+    display: grid;
+    grid-template-columns: 1fr 7.647vw 9.412vw;
+  }
+  
+  .header .user-name {
+    #margin-right: 2.353vw;
+    #margin-top: 2.588vw;
+    #font-size: 2.588vw;
+    margin-right: 2.353vw;
+    margin-top: 2.588vw;
+    font-size: 2.591vw;
+  }
+  .header .user-icon-pink {
+      display: inline-block;
+      background: #FF6868;
+      width: 5.882vw;
+      height: 5.882vw;
+      -moz-border-radius: 5.882vw;
+      -webkit-border-radius: 5.882vw;
+      -o-border-radius: 5.882vw;
+      -ms-border-radius: 5.882vw; 
+      border-radius: 5.882vw;
+    margin-right: 0.208vw;
+  }
+  
+  .header .user-icon-red {
+      display: inline-block;
+      background: #E21010;
+      width: 5.882vw;
+      height: 5.882vw;
+      -moz-border-radius: 5.882vw;
+      -webkit-border-radius: 5.882vw;
+      -o-border-radius: 5.882vw;
+      -ms-border-radius: 5.882vw; 
+      border-radius: 5.882vw;
+    margin-right: 0.415vw;
+  }
+  .header_line {
+    height: 100%;
+    width: 97%;
+    margin: auto auto;
+    text-align:center;
+    background-color:#fff;
+  }
+  
+  .main {
+    height: calc(100vh - 12.941vw);
+  
+    display: grid;
+    grid-template-columns: 21.176vw 1.176vw 1fr;
+  }
+  .main .menu {
+    width: 100%;
+  }
+  .main .menu_line {
+    width: 100%;
+    margin-top:3.059vw;
+    background-color: #fff;
+  }
+  .menu > div {
+    font-size: 2.353vw;
+    margin-top: 5.882vw;
+    margin-left: 4.706vw;
+  }
+  .menu > div > div {
+    margin-bottom: 3.529vw;
+  }
+  
+  .main .inside {
+      overflow:auto;
+  }
+  .inside .graph {
+    height:38.824vw;
+  
+    display: grid;
+    grid-template-columns: minmax(44.706vw, 1fr) minmax(44.706vw, 1fr);
+  }
+  .inside .graph_line {
+    #height: 0.941vw;
+    width: 90%;
+    margin: auto auto;
+    text-align:center;
+    #background-color:#fff;
+    border-bottom: 0.706vw dashed #FFFFFF;
+    margin-bottom: 4.706vw;
+  
+  }
+  .graph-a {
+    position: relative;
+  }
+  .graph-a img {
+    height: 31.765vw;
+  }
+  .graph-a div {
+    height: 31.765vw;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+  }
+  .graph-b {
+    position: relative;
+  }
+  .graph-b img {
+    height: 31.765vw;
+  }
+  .graph-b div {
+    height: 31.765vw;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+  }
+  
+  .messages, .posts {
+    #background-color: #999;
+    /* header の 112px と graph 312px を引く */
+    #height: calc(100vh - 49.882vw);
+  }
+  
+  .posts .message-date {
+    text-align: center;
+    background-color: #fff;
+    height: 2.588vw;
+    width: 11.765vw;
+    color: #777;
+    border-radius: 1.294vw 1.294vw;
+    margin-left: 2.941vw;
+    padding-top: 1.176vw;
+    margin-bottom: 2.353vw;
+    font-size: 1.882vw;
+  }
+  
+  .messages .message-date {
+    margin-top: 4.941vw;
+    text-align: center;
+    background-color: #fff;
+    height: 2.588vw;
+    width: 11.765vw;
+    color: #777;
+    border-radius: 1.294vw 1.294vw;
+    margin-left: 2.941vw;
+    padding-top: 1.176vw;
+    margin-bottom: 2.353vw;
+    font-size: 1.882vw;
+  }
+  .message {
+    min-height: 4.706vw;
+    background-color: #fff;
+    text-align: left;
+    padding-left: 2.353vw;
+    padding-top: 2.353vw;
+    padding-bottom: 2.353vw;
+    padding-right: 2.353vw;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 2.471vw;
+    #min-width: 47.059vw;
+    #max-width: 90%;
+    border-radius: 2.706vw 2.706vw;
+  
+    display: grid;
+    grid-template-columns: 5.882vw 1fr;
+  }
+  
+  .message-icon {
+      display: inline-block;
+      width: 4.118vw;
+      height: 4.118vw;
+      #background: #FF6868;
+      -moz-border-radius: 4.118vw;
+      -webkit-border-radius: 4.118vw;
+      -o-border-radius: 4.118vw;
+      -ms-border-radius: 4.118vw; 
+      border-radius: 4.118vw;
+    margin-right: 1.765vw;
+    margin-top: -0.588vw;
+  }
+  
+  .message-icon img {
+      height: 4.118vw;
+  }
+  
+  .message-text {
+    vertical-align: top;
+    color: #777;
+    font-size: 2.118vw;
+    word-break: break-all;
+  }
+  .message-datetime {
+    font-size: 1.882vw;
+    color: #999;
+    margin-left: 0.588vw;
+  }
+  
+  .post {
+    min-height: 3.529vw;
+    background-color: #fff;
+    text-align: left;
+    padding-left: 2.353vw;
+    padding-top: 2.353vw;
+    padding-bottom: 2.353vw;
+    padding-right: 2.353vw;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 2.471vw;
+    border-radius: 2.706vw 2.706vw;
+  
+    display: grid;
+    grid-template-columns: 5.882vw 1fr;
+  }
+  
+  
+  #post-message {
+    vertical-align: top;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background: none;
+    font-size: 2.118vw;
+    margin-top: -1.176vw;
+    color: #555;
+    min-height: 3.529vw;
+  }
+  
+  .post-message {
+    display: grid;
+    grid-template-rows: 1fr 4.706vw;
+  }
+  
+  .post-button {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background: none;
+    text-align: center;
+    vertical-align: bottom;
+    background-color: #fff;
+    width: 11.765vw;
+    height: 4.706vw;
+    border-radius: 1.882vw 1.882vw;
+    margin: 0 0 0 auto;
+    color: #3699AE;
+    margin-bottom: -2.353vw;
+    font-size: 2.118vw;
+    border: solid 0.353vw #3699AE;
+  }
+  .post-button span {
+    margin-left: 1.529vw;
+  }
+  
+  
